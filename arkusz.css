@@ -1,0 +1,31 @@
+body {
+    background: black;
+    color: white;
+}
+
+form {
+    width: 200px;
+}
+
+canvas {
+    border: 1px solid orange;
+    color: teal;
+}
+
+div {
+    margin: 20px;
+}
+
+#editData {
+    width: 200px; 
+    height: 400px;
+}
+
+.floatLeft {
+    float: left;
+    
+}
+
+.formElement {
+    margin: 5px;
+}

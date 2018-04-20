@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="arkusz.css" media="screen" type="text/css">
+    <title>Figure drawing</title>
+  </head>
+  <body>
+    <main class="container">
+
+      <h3>Aktualne dane w formacie JSON:</h3>
+      <div id="clientData"></div>
+ 
+      <h3>Wykres</h3>
+      <canvas id="wykres" class="floatLeft" width="800" height="400">
+        Wygląda na to, że twoja przeglądarka nie obsługuje elementu "canvas"
+      </canvas>
+
+      <div id="editData" class="floatLeft">
+        <form>
+          <h2>Edytuj dane klienta</h2>
+
+            <div class="form-check form-group" name="whatToEdit">
+              <input type="radio" name="whatToEdit" value="howManyTransactions" checked> Ile transakcji (HMT)<br>
+              <input type="radio" name="whatToEdit" value="howMuchSpent"> Ile wydał (HMS)<br>
+            </div>
+
+            <select class="form-control form-group" name="month">
+              <option value="Jan">Jan</option>
+              <option value="Feb">Feb</option>
+              <option value="Mar">Mar</option>
+              <option value="Apr">Apr</option>
+              <option value="May">May</option>
+              <option value="Jun">Jun</option>
+              <option value="Jul">Jul</option>
+              <option value="Aug">Aug</option>
+              <option value="Sep">Sep</option>
+              <option value="Oct">Oct</option>
+              <option value="Nov">Nov</option>
+              <option value="Dec">Dec</option>
+            </select>
+
+            <input class="form-control form-number form-group" name="amount" type="number"
+              min="0" placeholder="Liczba">
+            <input class="btn btn-success form-group" type="button" onclick="editClientData()" value="Edytuj Dane">
+        </form>
+      </div>
+
+      <div style="clear: both;"></div>
+
+    </main>
+
+    <script src="skrypt.js"></script>
+  </body>
+</html>
